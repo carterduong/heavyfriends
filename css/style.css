@@ -1,0 +1,67 @@
+body {
+	background-color: black;
+}
+
+a {
+	text-decoration: none;
+}
+
+.name {
+	color: white;
+	font-family: "Big Caslon", "Helvetica Neue";
+	font-size: 5rem;
+	/*
+	margin: auto;
+	padding-top: 50px;
+	position :relative;
+	
+	-webkit-animation: mymove 5s infinite;
+	animation: mymove 5s infinite;
+	*/
+}
+
+.main {
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subhead {
+	position: absolute;
+	bottom: 1.5rem;
+	left: 50%;
+}
+
+img {
+	/*
+	width: 400px;
+	height: auto;
+	margin-left: 500px;
+	padding-top: 100px;
+	position :relative;
+	-webkit-animation: mymove 5s infinite;
+	animation: mymove 5s infinite;
+	*/
+	display: inline-block;
+	width: 100%;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+	0%   {top: 100px;}
+	25%  {top: 200px;}
+	75%  {top: 100px}
+	100% {top: 200px;}c 
+}
+
+/* Standard syntax */
+@keyframes mymove {
+	0%   	{top: 0px; margin-left: 0px;}
+	20% 	{top: 50px; margin-left: -50px;}
+	40% 	{top: 20px; margin-left: 40px;}
+	60% 	{top: 10px; margin-left: 15px;}
+	80% 	{top: 56px; margin-left: 34px;}
+	100%	{top: 0px; margin-left: 0px;}
+}
