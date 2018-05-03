@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heavy Friends</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        div {
+            margin: auto;
+            padding-top: 100px;
+            position :relative;
+            text-align: center;
+            padding-top: 50px;
+            background: rgba(255, 255, 255, 0.0);
+            line-height: 1.0;
+
+            /*-webkit-animation: mymove 10s;
+            animation: mymove 10s;
+            */
+        }
+
+        h1 {
+            font-family: Big Caslon;
+            font-size: 35px;
+        }
+
+        #box {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes mymove {
+            0%   {top: 100px;}
+            25%  {top: 200px;}
+            75%  {top: 100px;}
+            100% {top: 200px;}
+        }
+
+        /* Standard syntax */
+        @keyframes mymove {
+            0%      {top: 0px; margin-left: 0px;}
+            33.3%   {top: 500px; margin-left: -500px;}
+            66.6%   {top: 500px; margin-left: 500px;}
+            100%    {top: 0px; margin-left: 0px;}
+        }
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            //$("h1").hover().slideUp(2000).slideDown(2000);
+            $("div").hover(function() {
+                $("div").animate({
+                    top: '250px'
+                });
+                $("div").animate({
+                    top: '0px'
+                });
+            });
+
+        }); //$(document)
+    </script>
+</head>
+
+<body>
+    <div>Heavy Friends</div>
+    <div>Heavy Friends</div>
+    <div>Heavy Friends</div>
+    <div>Heavy Friends</div>
+    <div>Heavy Friends</div>
+    <div>Heavy Friends</div>
+
+
+</body>
+</html>
