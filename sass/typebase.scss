@@ -24,6 +24,7 @@ html {
 
     color: white;
     background-color: black;
+    z-index: 100;
 }
 
 body {
@@ -45,6 +46,7 @@ ol {
     list-style-type: decimal-leading-zero;
     margin-top: $leading;
     margin-bottom: $leading;
+    letter-spacing: +1px;
     li {
         line-height: $leading;
     }
@@ -78,6 +80,7 @@ h1 {
     font-size: 3 * $scale * 1rem;
     line-height: 3 * $leading;
     margin-top: 2 * $leading;
+    letter-spacing: 0px;
 
 }
 h2 {

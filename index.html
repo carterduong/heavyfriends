@@ -7,27 +7,26 @@
 
   <title>Heavy Friends</title>
 
-  <l ink href="css/normalize.css" rel="stylesheet">
-	<l ink href="css/typebase.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+	<link href="css/typebase.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="js/index.js"></script>
 	
 </head>
 
 <body>
-  <div class="row">
+  <div id="row" class="text">
     <h1>
       Heavy Friends
     </h1>
     <h4>
-      with <a href="">DJ ABG</a> and 
-      <a href="">DJ ABB</a>
+      with <a href="https://www.instagram.com/soggycruller/">DJ ABG</a> and 
+      <a href="https://www.instagram.com/carterduong/">DJ SAT -2400</a>
     </h4>
   </div>
 
-  <div class="">
+  <div class="" class="text">
       <h2>Episode 01</h2>
       <h3>
         April 27, 2018<br>
@@ -40,7 +39,7 @@
       </h4>
   </div>
 
-  <div class="">
+  <div class="" class="text">
     <ol>
       <li>Boris – Heavy Friends</li>
       <li>Sade – When Am I Going To Make A Living (Poolside's Tons of Drums Edit)</li>
@@ -67,9 +66,174 @@
   </div>
 
   <div>
-      <img src="img/tear.png" id="tear">
-      <img src="img/1.jpg">
+    <img src="img/tear.png" id="tear">
+    <img src="img/1.jpg">
   </div>
+
+  <script src="js/lib/three.min.js"></script>
+  <script src="js/lib/STLLoader.js"></script>
+  <script src="js/lib/Detector.js"></script>
+  <script src="js/lib/stats.min.js"></script>
+
+
+  <script id="vertexShader" type="x-shader/x-vertex">
+
+      float random (vec2 st) {
+        return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
+      } 
+
+
+      void main() {
+
+        gl_PointSize = 4.0;
+
+        float rndX = random(position.xy);
+        float rndY = random(position.xy);
+        float rndZ = random(position.xy);
+        vec3 newPos = vec3(position.x + rndX * 0.1, position.y + rndY * 0.1, position.z + rndZ * 0.1);
+        
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(newPos, 1.0);
+
+      }
+
+    </script>
+
+    <script id="fragmentShader" type="x-shader/x-fragment">
+
+      uniform vec2 u_resolution;
+
+      float random (vec2 st) {
+          return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
+      }
+
+      void main() {
+
+        vec2 st = gl_FragCoord.xy;
+        float rnd = random( st );
+
+        if (rnd < 0.4) {
+          gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+        }
+        else {
+          gl_FragColor = vec4(0.0, 0.0, 0.0, 0.0);
+        }
+
+      }
+
+    </script>
+
+    <script>
+
+      if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
+      var container, stats;
+      var camera, cameraTarget, scene, renderer;
+      var uniforms;
+
+      init();
+      animate();
+
+      function init() {
+
+        container = document.createElement( 'div' );
+        document.body.appendChild( container );
+
+        camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 1, 15 );
+        //camera.position.set( 3, 0.15, 3 );
+
+        cameraTarget = new THREE.Vector3( 0, 0, 0 );
+
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color( 0x000000 );
+
+        // load object into scene
+        var loader = new THREE.STLLoader();
+
+        loader.load( 'models/old_volvo.stl', function ( geometry ) {
+
+          var material = new THREE.ShaderMaterial( {
+            uniforms: { },
+            vertexShader: document.getElementById( 'vertexShader' ).textContent,
+            fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+          } );
+
+          var points = new THREE.Points(geometry, material);
+          points.position.set( 0, -0.5, 0 );
+          points.rotation.set( - Math.PI / 2, 0, Math.PI / 2 );
+          points.scale.set( 0.05, 0.05, 0.05 );
+          scene.add( points );
+
+        });
+
+        /*        
+        // load object into scene
+        var loader = new THREE.STLLoader();
+
+        loader.load( './models/stl/old_volvo.stl', function ( geometry ) {
+
+          var material = new THREE.PointsMaterial({ color: 0xFFFFFF, size: 0.01 });
+          var points = new THREE.Points(geometry, material);
+          points.position.set( 0, -0.1, 0 );
+          points.rotation.set( - Math.PI / 2, 0, Math.PI / 2 );         
+          points.scale.set( 0.03, 0.03, 0.03 );
+          scene.add( points );
+
+        } );
+        */
+
+        // renderer init
+        renderer = new THREE.WebGLRenderer( { antialias: false } );
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth, window.innerHeight );
+
+        renderer.gammaInput = true;
+        renderer.gammaOutput = true;
+
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.renderReverseSided = false;
+
+        container.appendChild( renderer.domElement );
+
+        // stats
+        stats = new Stats();
+        container.appendChild( stats.dom );
+
+        window.addEventListener( 'resize', onWindowResize, false );
+
+      }
+
+      function onWindowResize() {
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize( window.innerWidth, window.innerHeight );
+
+      }
+
+      function animate() {
+
+        requestAnimationFrame( animate );
+        render();
+        stats.update();
+
+      }
+
+      function render() {
+
+        var timer = Date.now() * 0.00005;
+
+        camera.position.x = Math.cos( timer ) * 2.5;
+        camera.position.y = 1.0;
+        camera.position.z = Math.sin( timer ) * 2;
+
+        camera.lookAt( cameraTarget );
+
+        renderer.render( scene, camera );
+
+      }
+    </script>
+
 
 </body>
 </html>
