@@ -3,194 +3,191 @@
 <head>
 
 	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Heavy Friends</title>
+	<title>Heavy Friends</title>
 
-  <link href="css/normalize.css" rel="stylesheet">
+	<link href="css/normalize.css" rel="stylesheet">
 	<link href="css/typebase.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	
+	<link href="css/style.css" rel="stylesheet">	
 </head>
 
 <body>
-  <div id="row" class="text">
-    <h1>
-      Heavy Friends
-    </h1>
-    <h4>
-      with <a href="https://www.instagram.com/soggycruller/">DJ ABG</a> and 
-      <a href="https://www.instagram.com/carterduong/">DJ SAT -2400</a>
-    </h4>
-  </div>
+	<div id="row" class="text">
+		<h1>
+			Heavy Friends
+		</h1>
+		<h4>
+			with <a href="https://www.instagram.com/soggycruller/">DJ ABG</a> and 
+			<a href="https://www.instagram.com/carterduong/">DJ SAT -2400</a>
+		</h4>
+	</div>
 
-  <div class="" class="text">
-      <h2>Episode 01</h2>
-      <h3>
-        April 27, 2018<br>
-        32°52'38.2"N 117°14'24.8"W<br>
-        La Jolla, California
-      </h3>
-      <h4>
-        EMAIL <a href="mailto:c@heavyfriends.co">C@HEAVYFRIENDS.CO</a><br>
-        FOR ACCESS TO ARCHIVED AUDIO 
-      </h4>
-  </div>
+	<div class="" class="text">
+			<h2>Episode 01</h2>
+			<h3>
+				April 27, 2018<br>
+				32°52'38.2"N 117°14'24.8"W<br>
+				La Jolla, California
+			</h3>
+			<h4>
+				EMAIL <a href="mailto:c@heavyfriends.co">C@HEAVYFRIENDS.CO</a><br>
+				FOR ACCESS TO ARCHIVED AUDIO 
+			</h4>
+	</div>
 
-  <div class="" class="text">
-    <ol>
-      <li>Playboy Carti – Firearm (feat. Lil Uzi Vert)</li>
-      <li>Gunna – Sold Out Dates (feat. Lil Baby)</li>
-      <li>SOB X RBE – Anti Social</li>
-      <li>Hannibal Interlude</li>
-      <li>Yung Lean – Red Bottom Sky</li>
-      <li>Lucki – Don't You Love Me</li>
-      <li>Lucki – Root of All</li>
-      <li>Henna Interlude</li>
-      <li>Frank Ocean – Slide on Me</li>
-      <li>Black Flag – Nervous Breakdown</li>
-      <li>boy pablo – Losing You</li>
-      <li>Japanese Breakfast – Boyish</li>
-      <li>Toro y Moi – Campo</li>
-      <li>DJ Boring – Tribal Dreams</li>
-      <li>M44K – On and On</li>
-      <li>Lone – Arc</li>
-      <li>Stevie Wonder – If Its Magic</li>
-    </ol>
-    <h5>:/</h5>
-  </div>
+	<div class="" class="text">
+		<ol>
+			<li>Playboy Carti – Firearm (feat. Lil Uzi Vert)</li>
+			<li>Gunna – Sold Out Dates (feat. Lil Baby)</li>
+			<li>SOB X RBE – Anti Social</li>
+			<li>Hannibal Interlude</li>
+			<li>Yung Lean – Red Bottom Sky</li>
+			<li>Lucki – Don't You Love Me</li>
+			<li>Lucki – Root of All</li>
+			<li>Henna Interlude</li>
+			<li>Frank Ocean – Slide on Me</li>
+			<li>Black Flag – Nervous Breakdown</li>
+			<li>boy pablo – Losing You</li>
+			<li>Japanese Breakfast – Boyish</li>
+			<li>Toro y Moi – Campo</li>
+			<li>DJ Boring – Tribal Dreams</li>
+			<li>M44K – On and On</li>
+			<li>Lone – Arc</li>
+			<li>Stevie Wonder – If Its Magic</li>
+		</ol>
+		<h5>:/</h5>
+	</div>
 
-  <div>
-    <img src="img/tear.png" id="tear">
-  </div>
+	<div>
+		<img src="img/tear.png" id="tear">
+	</div>
 
-  <script src="js/lib/three.min.js"></script>
-  <script src="js/lib/STLLoader.js"></script>
-  <script src="js/lib/Detector.js"></script>
-  <script src="js/lib/stats.min.js"></script>
+	<script src="js/lib/three.min.js"></script>
+	<script src="js/lib/STLLoader.js"></script>
+	<script src="js/lib/Detector.js"></script>
+	<script src="js/lib/stats.min.js"></script>
 
-  <script src="js/Cloth.js"></script>
+	<script src="js/Cloth.js"></script>
 
 
-  <script type="">
-    if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+	<script type="">
+		if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
-    var container, stats;
-    var camera, cameraTarget, scene, renderer;
-    var uniforms;
-    var texture, plane, loader;
-    var images = [];
+		var container, stats;
+		var camera, cameraTarget, scene, renderer;
+		var uniforms;
+		var texture, plane, loader;
+		var images = [];
 
-    init();
-    animate();
+		init();
+		animate();
 
-    function init() {
+		function init() {
 
-      container = document.createElement( 'div' );
-      document.body.appendChild( container );
+			container = document.createElement( 'div' );
+			document.body.appendChild( container );
 
-      // camera + scene setup
-      camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 1, 15 );
-      cameraTarget = new THREE.Vector3( 0, 0, 0 );
-      scene = new THREE.Scene();
-      scene.background = new THREE.Color( 0x000000 );
+			// camera + scene setup
+			camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 1, 15 );
+			cameraTarget = new THREE.Vector3( 0, 0, 0 );
+			scene = new THREE.Scene();
+			scene.background = new THREE.Color( 0x000000 );
 
-      // instantiate a loader
-      loader = new THREE.TextureLoader();
-      loadImageasPlane('img/2.jpg', loader);
-      loadImageasPlane('img/1.jpg', loader);
+			// instantiate a loader
+			loader = new THREE.TextureLoader();
+			loadImageasPlane('img/2.jpg', loader);
+			loadImageasPlane('img/1.jpg', loader);
 
-      // renderer init
-      renderer = new THREE.WebGLRenderer( { antialias: false } );
-      renderer.setPixelRatio( window.devicePixelRatio );
-      renderer.setSize( window.innerWidth, window.innerHeight );
-      renderer.gammaInput = true;
-      renderer.gammaOutput = true;
-      renderer.shadowMap.enabled = true;
-      renderer.shadowMap.renderReverseSided = false;
-      container.appendChild( renderer.domElement );
+			// renderer init
+			renderer = new THREE.WebGLRenderer( { antialias: false } );
+			renderer.setPixelRatio( window.devicePixelRatio );
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			renderer.gammaInput = true;
+			renderer.gammaOutput = true;
+			renderer.shadowMap.enabled = true;
+			renderer.shadowMap.renderReverseSided = false;
+			container.appendChild( renderer.domElement );
 
-      // stats
-      stats = new Stats();
-      //container.appendChild( stats.dom );
+			// stats
+			stats = new Stats();
+			//container.appendChild( stats.dom );
 
-      window.addEventListener( 'resize', onWindowResize, false );
+			window.addEventListener( 'resize', onWindowResize, false );
 
-      camera.position.x = 0.0;
-      camera.position.y = 0.0;
-      camera.position.z = 3.0;
-      camera.lookAt( cameraTarget );
+			camera.position.x = 0.0;
+			camera.position.y = 0.0;
+			camera.position.z = 3.0;
+			camera.lookAt( cameraTarget );
 
-    }
+		}
 
-    function onWindowResize() {
+		function onWindowResize() {
 
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
+			camera.aspect = window.innerWidth / window.innerHeight;
+			camera.updateProjectionMatrix();
 
-      renderer.setSize( window.innerWidth, window.innerHeight );
+			renderer.setSize( window.innerWidth, window.innerHeight );
 
-    }
+		}
 
-    function animate() {
+		function animate() {
 
-      requestAnimationFrame( animate );
-      render();
-      stats.update();
+			requestAnimationFrame( animate );
+			render();
+			stats.update();
 
-    }
+		}
 
-    function render() {
+		function render() {
 
-      var timer = Date.now() * 0.00005;
+			var timer = Date.now() * 0.00005;
 
-      for (var i = 0; i < images.length; i++) {
-        // images[i].position.x = Math.cos( timer ) * 1.5;
-        // images[i].position.y = Math.cos( timer ) * 1.5;
-        // images[i].position.z = Math.cos( timer );
-        images[i].position.x = 0;
-        images[i].position.y = 0;
-        images[i].position.z = 0;
-      }
+			for (var i = 0; i < images.length; i++) {
+				// images[i].position.x = Math.cos( timer ) * 1.5;
+				// images[i].position.y = Math.cos( timer ) * 1.5;
+				// images[i].position.z = Math.cos( timer );
+				images[i].position.x = 0;
+				images[i].position.y = 0;
+				images[i].position.z = 0;
+			}
 
-      renderer.render( scene, camera );
-    }
+			renderer.render( scene, camera );
+		}
 
-    // scale a planes dimensions to match an image and assign it the material
-    function loadImageasPlane(url, loader) {
-      var geometry = new THREE.PlaneGeometry( 1, 1 );
-      loader.load(
-        // resource URL
-        url,
+		// scale a planes dimensions to match an image and assign it the material
+		function loadImageasPlane(url, loader) {
+			var geometry = new THREE.PlaneGeometry( 1, 1 );
+			loader.load(
+				// resource URL
+				url,
 
-        // onLoad callback
-        function ( texture ) {
-          var material = new THREE.MeshBasicMaterial( {
-            map: texture,
-            side: THREE.DoubleSide
-           } );
+				// onLoad callback
+				function ( texture ) {
+					var material = new THREE.MeshBasicMaterial( {
+						map: texture,
+						side: THREE.DoubleSide
+					 } );
 
-          plane = new THREE.Mesh( geometry, material );
-          plane.scale.x = texture.image.width / 1000;
-          plane.scale.y = texture.image.height / 1000;
-          scene.add( plane );
+					plane = new THREE.Mesh( geometry, material );
+					plane.scale.x = texture.image.width / 1000;
+					plane.scale.y = texture.image.height / 1000;
+					scene.add( plane );
 
-          images.push(plane);
-        },
+					images.push(plane);
+				},
 
-        // onProgress callback currently not supported
-        undefined,
+				// onProgress callback currently not supported
+				undefined,
 
-        // onError callback
-        function ( err ) {
-          console.error( 'An error happened.' );
-        }
-      );
-    }
+				// onError callback
+				function ( err ) {
+					console.error( 'An error happened.' );
+				}
+			);
+		}
 
-  </script>
+	</script>
 
 
 </body>
