@@ -31,8 +31,34 @@ body {
     margin: 8px;
 }
 
+/* Links */
+
 a {
     color: white;
+    font-size: $scale / 2 * 1rem;
+}
+
+#episodes a {
+    font-family: "Helvectica Neue", sans-serif;
+    font-weight: 400;
+    font-size: $scale / 2 * 1rem;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+
+    /*
+    line-height: 3 * $leading;
+    margin-top: 2 * $leading;
+    margin-bottom: 0 * $leading;
+    */
+
+    &.active {
+        font-size: 2 * $scale * 1rem;
+    }
+}
+
+#episodes {
+    margin-top: $leading;
 }
 
 /* Copy & Lists */
@@ -101,7 +127,6 @@ h5 {
 h6 {
     font-size: $scale / 4 * 1rem;
 }
-
 
 // Logotype
 h1:first-child {

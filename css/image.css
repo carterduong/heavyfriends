@@ -1,0 +1,27 @@
+#tear {
+  position: absolute;
+  top: 8%;
+  left: 27%;
+  height: 15rem;
+  z-index: 1; }
+
+img {
+  position: absolute;
+  top: 55%;
+  left: 65%;
+  height: 15rem;
+  z-index: 1; }
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; }
+
+.flip {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg); }
+
+/*# sourceMappingURL=image.css.map */

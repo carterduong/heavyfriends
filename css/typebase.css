@@ -12,8 +12,28 @@ html {
 body {
   margin: 8px; }
 
+/* Links */
 a {
-  color: white; }
+  color: white;
+  font-size: 0.707rem; }
+
+#episodes a {
+  font-family: "Helvectica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 0.707rem;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  /*
+  line-height: 3 * $leading;
+  margin-top: 2 * $leading;
+  margin-bottom: 0 * $leading;
+  */ }
+  #episodes a.active {
+    font-size: 2.828rem; }
+
+#episodes {
+  margin-top: 1.5rem; }
 
 /* Copy & Lists */
 p {

@@ -13,7 +13,7 @@
 
 	<body>
 
-		<div id="row" class="text">
+		<div id="row" class="">
 			<h1>
 				Heavy Friends
 			</h1>
@@ -23,20 +23,17 @@
 			</h4>
 		</div>
 
-		<div class="" class="text">
-				<h2>Episode 01</h2>
-				<h3>
-					April 27, 2018<br>
-					32°52'38.2"N 117°14'24.8"W<br>
-					La Jolla, California
-				</h3>
-				<h4>
-					EMAIL <a href="mailto:c@heavyfriends.co">C@HEAVYFRIENDS.CO</a><br>
-					FOR ACCESS TO ARCHIVED AUDIO 
-				</h4>
-		</div>
-
-		<div class="" class="text">
+		<div id="stage">
+			<h2>Episode 01</h2>
+			<h3>
+				April 27, 2018<br>
+				32°52'38.2"N 117°14'24.8"W<br>
+				La Jolla, California
+			</h3>
+			<h4>
+				EMAIL <a href="mailto:c@heavyfriends.co">C@HEAVYFRIENDS.CO</a><br>
+				FOR ACCESS TO ARCHIVED AUDIO 
+			</h4>
 			<ol>
 				<li>Playboy Carti – Firearm (feat. Lil Uzi Vert)</li>
 				<li>Gunna – Sold Out Dates (feat. Lil Baby)</li>
@@ -59,15 +56,29 @@
 			<h5>:/</h5>
 		</div>
 
+		<input type = "button" id = "driver" value = "Load Data" />
 		<div>
 			<img src="img/tear.png" id="tear">
 		</div>
 
+		<!-- JavaScript -->
+
+		<script src="js/lib/jquery.min.js"></script>
 		<script src="js/lib/three.min.js"></script>
 		<script src="js/lib/Detector.js"></script>
 		<script src="js/lib/stats.min.js"></script>
-
 		<script src="js/Cloth.js"></script>
+
+	 <script type = "text/javascript" language = "javascript">
+       $(document).ready(function() {
+          $("#driver").click(function(event){
+             $('#stage').load('/sampler.html');
+             console.log("click");
+          });
+       });
+		</script>
+
+
 		<script>
 
 			/* testing cloth simulation */

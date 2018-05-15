@@ -1,194 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Heavy Friends</title>
 
-	<title>Heavy Friends</title>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119274729-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
 
-	<link href="css/normalize.css" rel="stylesheet">
-	<link href="css/typebase.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">	
-</head>
+			gtag('config', 'UA-119274729-1');
+		</script>
 
-<body>
-	<div id="row" class="text">
-		<h1>
-			Heavy Friends
-		</h1>
-		<h4>
-			with <a href="https://www.instagram.com/soggycruller/">DJ ABG</a> and 
-			<a href="https://www.instagram.com/carterduong/">DJ SAT -2400</a>
-		</h4>
-	</div>
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">	
+	</head>
 
-	<div class="" class="text">
-			<h2>Episode 01</h2>
+	<body>
+
+		<div id="row" class="">
+			<h1>Heavy Friends</h1>
+			<h4>
+				with <a href="https://www.instagram.com/soggycruller/">DJ ABG</a> and <a href="https://www.instagram.com/carterduong/">DJ SAT -2400</a>
+			</h4>
+			<h4>
+				EMAIL <a href="mailto:c@heavyfriends.info">C@HEAVYFRIENDS.CO</a><br>
+				FOR ACCESS TO ARCHIVED AUDIO 
+			</h4>
+		</div>
+
+
+		<div id="episodes">
+			<a id="ep0" class="active">Episode 00</a>
+			<a id="ep1">Episode 01</a>
+			<a id="ep2">Episode 02</a>
+			<a id="ep3" style="text-decoration: line-through;">Episode 03</a>
+			<a id="ep4" style="text-decoration: line-through;">Episode 04</a>
+			<a id="ep5" style="text-decoration: line-through;">Episode 05</a>
+			<a id="ep6" style="text-decoration: line-through;">Episode 06</a>
+		</div>
+
+		<div id="stage">
 			<h3>
-				April 27, 2018<br>
+				March 16, 2018<br>
 				32°52'38.2"N 117°14'24.8"W<br>
 				La Jolla, California
 			</h3>
-			<h4>
-				EMAIL <a href="mailto:c@heavyfriends.co">C@HEAVYFRIENDS.CO</a><br>
-				FOR ACCESS TO ARCHIVED AUDIO 
-			</h4>
-	</div>
+			<ol>
+				<li>Boris – Heavy Friends</li>
+				<li>Sade – When Am I Going To Make A Living (Poolside's Tons of Drums Edit)</li>
+				<li>Summer Peaks – Entwined</li>
+				<li>Donald Byrd – Just My Imagination (Running Away With Me)</li>
+				<li>Das Racist – Rapping 2 U</li>
+				<li>Weezer – Burdnt Jamb</li>
+				<li>Whoearei – Love Will Shine</li>
+				<li>Lomelda – Only World</li>
+				<li>Lone – Jaded</li>
+				<li>Martin Courtney – Airport Bar</li>
+				<li>Wiley – Laptop (feat. Manga)</li>
+				<li>The Marías – Déjate Llevar</li>
+				<li>Gunna – Oh Okay (feat. Young Thug and Lil Baby)</li>
+				<li>Mall Grab – Awake</li>
+				<li>Drakeo the Ruler – Flu Flamming</li>
+				<li>Melvins – Honey Bucket</li>
+				<li>Jorja Smith &amp; Preditah – On My Mind</li>
+				<li>Four Tet – SW9 9SL</li>
+				<li>Toro y Moi – Us 2</li>
+				<li>Beach Fossils – Sleep Apnea</li>
+			</ol>
+			<h5 class="flip">FUCK WHAT CHU HEARD</h5>
+		</div>
 
-	<div class="" class="text">
-		<ol>
-			<li>Playboy Carti – Firearm (feat. Lil Uzi Vert)</li>
-			<li>Gunna – Sold Out Dates (feat. Lil Baby)</li>
-			<li>SOB X RBE – Anti Social</li>
-			<li>Hannibal Interlude</li>
-			<li>Yung Lean – Red Bottom Sky</li>
-			<li>Lucki – Don't You Love Me</li>
-			<li>Lucki – Root of All</li>
-			<li>Henna Interlude</li>
-			<li>Frank Ocean – Slide on Me</li>
-			<li>Black Flag – Nervous Breakdown</li>
-			<li>boy pablo – Losing You</li>
-			<li>Japanese Breakfast – Boyish</li>
-			<li>Toro y Moi – Campo</li>
-			<li>DJ Boring – Tribal Dreams</li>
-			<li>M44K – On and On</li>
-			<li>Lone – Arc</li>
-			<li>Stevie Wonder – If Its Magic</li>
-		</ol>
-		<h5>:/</h5>
-	</div>
+		<div>
+			<img src="img/tear.png" id="tear">
+		</div>
 
-	<div>
-		<img src="img/tear.png" id="tear">
-	</div>
+		<!-- JavaScript -->
 
-	<script src="js/lib/three.min.js"></script>
-	<script src="js/lib/STLLoader.js"></script>
-	<script src="js/lib/Detector.js"></script>
-	<script src="js/lib/stats.min.js"></script>
+		<script src="js/lib/jquery.min.js"></script>
+		<script src="js/lib/three.min.js"></script>
+		<script src="js/lib/Detector.js"></script>
+		<script src="js/lib/stats.min.js"></script>
+		<script src="js/Cloth.js"></script>
 
-	<script src="js/Cloth.js"></script>
+		<script type = "text/javascript" language = "javascript">
+			$(document).ready(function() {
+
+				$('#ep0').click(function(event){
+					$('#stage').load('/ep0.html');
+			 	});
+
+			 	$('#ep1').click(function(){
+					$('#stage').load('/ep1.html');
+				});
+
+				$('#episodes').on("click", "a", function(event) {
+					$('#episodes').children('a').each(function () {
+					    $(this).removeClass("active");
+					});
+					if (!$(this).hasClass("active")) {
+						$(this).toggleClass("active");
+					}
+				});
 
 
-	<script type="">
-		if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+		 	});
+		</script>
 
-		var container, stats;
-		var camera, cameraTarget, scene, renderer;
-		var uniforms;
-		var texture, plane, loader;
-		var images = [];
+		<script>
 
-		init();
-		animate();
+			/* testing cloth simulation */
 
-		function init() {
+			// var pinsFormation = [];
+			// var pins = [ 6 ];
 
-			container = document.createElement( 'div' );
-			document.body.appendChild( container );
+			// pinsFormation.push( pins );
 
-			// camera + scene setup
-			camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 1, 15 );
-			cameraTarget = new THREE.Vector3( 0, 0, 0 );
-			scene = new THREE.Scene();
-			scene.background = new THREE.Color( 0x000000 );
+			// pins = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+			// pinsFormation.push( pins );
 
-			// instantiate a loader
-			loader = new THREE.TextureLoader();
-			loadImageasPlane('img/2.jpg', loader);
-			loadImageasPlane('img/1.jpg', loader);
+			// pins = [ 0 ];
+			// pinsFormation.push( pins );
 
-			// renderer init
-			renderer = new THREE.WebGLRenderer( { antialias: false } );
-			renderer.setPixelRatio( window.devicePixelRatio );
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			renderer.gammaInput = true;
-			renderer.gammaOutput = true;
-			renderer.shadowMap.enabled = true;
-			renderer.shadowMap.renderReverseSided = false;
-			container.appendChild( renderer.domElement );
+			// pins = []; // cut the rope ;)
+			// pinsFormation.push( pins );
 
-			// stats
-			stats = new Stats();
-			//container.appendChild( stats.dom );
+			// pins = [ cloth.w, 0 ]; // classic 2 pins
+			// pinsFormation.push( pins );
 
-			window.addEventListener( 'resize', onWindowResize, false );
+			// pins = pinsFormation[ 1 ];
 
-			camera.position.x = 0.0;
-			camera.position.y = 0.0;
-			camera.position.z = 3.0;
-			camera.lookAt( cameraTarget );
+			var pins = [110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120];
 
-		}
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
-		function onWindowResize() {
+			var container, stats;
+			var camera, scene, renderer;
 
-			camera.aspect = window.innerWidth / window.innerHeight;
-			camera.updateProjectionMatrix();
+			var clothGeometry;
+			var object;
 
-			renderer.setSize( window.innerWidth, window.innerHeight );
+			init();
+			animate();
 
-		}
+			function init() {
 
-		function animate() {
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
 
-			requestAnimationFrame( animate );
-			render();
-			stats.update();
+				// scene
 
-		}
+				scene = new THREE.Scene();
 
-		function render() {
+				// camera
 
-			var timer = Date.now() * 0.00005;
+				camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.set( 0, 0, 800 );
 
-			for (var i = 0; i < images.length; i++) {
-				// images[i].position.x = Math.cos( timer ) * 1.5;
-				// images[i].position.y = Math.cos( timer ) * 1.5;
-				// images[i].position.z = Math.cos( timer );
-				images[i].position.x = 0;
-				images[i].position.y = 0;
-				images[i].position.z = 0;
+				// lights
+
+				var light, materials;
+
+				scene.add( new THREE.AmbientLight( 0x666666 ) );
+
+				light = new THREE.DirectionalLight( 0xdfebff, 1 );
+				light.position.set( 50, 200, 100 );
+				light.position.multiplyScalar( 1.3 );
+
+				light.castShadow = true;
+
+				light.shadow.mapSize.width = 1024;
+				light.shadow.mapSize.height = 1024;
+
+				var d = 300;
+
+				light.shadow.camera.left = - d;
+				light.shadow.camera.right = d;
+				light.shadow.camera.top = d;
+				light.shadow.camera.bottom = - d;
+
+				light.shadow.camera.far = 1000;
+
+				scene.add( light );
+
+				// cloth material
+
+				var loader = new THREE.TextureLoader();
+				var clothTexture = loader.load( 'img/2.jpg' );
+				clothTexture.anisotropy = 16;
+
+				var clothMaterial = new THREE.MeshLambertMaterial( {
+					map: clothTexture,
+					side: THREE.DoubleSide,
+					alphaTest: 0.5
+				} );
+
+				// cloth geometry
+
+				clothGeometry = new THREE.ParametricGeometry( clothFunction, cloth.w, cloth.h );
+
+				// cloth mesh
+
+				object = new THREE.Mesh( clothGeometry, clothMaterial );
+				object.position.set( 0, -250, 0 );
+				object.castShadow = true;
+				scene.add( object );
+
+				// renderer
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+				container.appendChild( renderer.domElement );
+
+				renderer.gammaInput = true;
+				renderer.gammaOutput = true;
+
+				renderer.shadowMap.enabled = true;
+
+				// performance monitor
+
+				stats = new Stats();
+				//container.appendChild( stats.dom );
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+
 			}
 
-			renderer.render( scene, camera );
-		}
+			//
 
-		// scale a planes dimensions to match an image and assign it the material
-		function loadImageasPlane(url, loader) {
-			var geometry = new THREE.PlaneGeometry( 1, 1 );
-			loader.load(
-				// resource URL
-				url,
+			function onWindowResize() {
 
-				// onLoad callback
-				function ( texture ) {
-					var material = new THREE.MeshBasicMaterial( {
-						map: texture,
-						side: THREE.DoubleSide
-					 } );
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
 
-					plane = new THREE.Mesh( geometry, material );
-					plane.scale.x = texture.image.width / 1000;
-					plane.scale.y = texture.image.height / 1000;
-					scene.add( plane );
+				renderer.setSize( window.innerWidth, window.innerHeight );
 
-					images.push(plane);
-				},
+			}
 
-				// onProgress callback currently not supported
-				undefined,
+			//
 
-				// onError callback
-				function ( err ) {
-					console.error( 'An error happened.' );
+			function animate() {
+
+				requestAnimationFrame( animate );
+
+				var time = Date.now();
+
+				var windStrength = Math.cos( time / 7000 ) * 20 + 40;
+
+				windForce.set( Math.sin( time / 2000 ), Math.cos( time / 3000 ), Math.sin( time / 1000 ) )
+				windForce.normalize()
+				windForce.multiplyScalar( windStrength );
+
+				simulate( time );
+				render();
+				stats.update();
+
+			}
+
+			function render() {
+
+				var p = cloth.particles;
+
+				for ( var i = 0, il = p.length; i < il; i ++ ) {
+
+					clothGeometry.vertices[ i ].copy( p[ i ].position );
+
 				}
-			);
-		}
 
-	</script>
+				clothGeometry.verticesNeedUpdate = true;
 
+				clothGeometry.computeFaceNormals();
+				clothGeometry.computeVertexNormals();
 
-</body>
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+	</body>
 </html>
