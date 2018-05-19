@@ -2,18 +2,21 @@
 
 #tear {
     position: absolute;
-    top: 8%;
-    left: 27%;
-    height: $leading * 10;
+    top: 70px;
+    left: 460px;
+    height: $leading * 9;
     z-index: 1;
+
+    @media only screen and (max-width: 736px) {
+    	top: 145px;
+    	left: 234px;
+	    height: $leading * 6;
+
+    }
 }
 
-img {
-    position: absolute;
-    top: 55%;
-    left: 65%;
-    height: $leading * 10;
-    z-index: 1;
+#episodes {
+	z-index: 50;
 }
 
 canvas {
@@ -21,11 +24,4 @@ canvas {
     top: 0;
     left: 0;
     z-index: -1;
-}
-
-.flip {
-    -webkit-transform:rotateY(180deg);
-    -moz-transform:rotateY(180deg);
-    -o-transform:rotateY(180deg);
-    -ms-transform:rotateY(180deg);
 }

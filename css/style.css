@@ -27,11 +27,6 @@ a {
   color: white;
   text-decoration: underline;
   cursor: pointer;
-  /*
-  line-height: 3 * $leading;
-  margin-top: 2 * $leading;
-  margin-bottom: 0 * $leading;
-  */
 }
 #episodes a.active {
   font-size: 2.828rem;
@@ -154,18 +149,21 @@ code {
 
 #tear {
   position: absolute;
-  top: 8%;
-  left: 27%;
-  height: 15rem;
+  top: 70px;
+  left: 460px;
+  height: 13.5rem;
   z-index: 1;
 }
+@media only screen and (max-width: 736px) {
+  #tear {
+    top: 145px;
+    left: 234px;
+    height: 9rem;
+  }
+}
 
-img {
-  position: absolute;
-  top: 55%;
-  left: 65%;
-  height: 15rem;
-  z-index: 1;
+#episodes {
+  z-index: 50;
 }
 
 canvas {
@@ -173,13 +171,6 @@ canvas {
   top: 0;
   left: 0;
   z-index: -1;
-}
-
-.flip {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -23,12 +23,7 @@ a {
   font-size: 0.707rem;
   color: white;
   text-decoration: underline;
-  cursor: pointer;
-  /*
-  line-height: 3 * $leading;
-  margin-top: 2 * $leading;
-  margin-bottom: 0 * $leading;
-  */ }
+  cursor: pointer; }
   #episodes a.active {
     font-size: 2.828rem; }
 

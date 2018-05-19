@@ -1,8 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- 
+                                                            .-.                             ___       ___                                                                  
+                                                           /    \                          (   )     (   )                                                                 
+    .--.      .--.    ___ .-.     ___ .-.     ___  ___     | .`. ;    .--.    ___ .-.       | |_      | | .-.     .--.      ___ .-. .-.     .--.       .--.        .--.    
+  /  _  \    /    \  (   )   \   (   )   \   (   )(   )    | |(___)  /    \  (   )   \     (   __)    | |/   \   /    \    (   )   '   \   /    \    /  _  \     /  _  \   
+ . .' `. ;  |  .-. ;  | ' .-. ;   | ' .-. ;   | |  | |     | |_     |  .-. ;  | ' .-. ;     | |       |  .-. .  |  .-. ;    |  .-.  .-. ; |  .-. ;  . .' `. ;   . .' `. ;  
+ | '   | |  | |  | |  |  / (___)  |  / (___)  | |  | |    (   __)   | |  | |  |  / (___)    | | ___   | |  | |  |  | | |    | |  | |  | | |  | | |  | '   | |   | '   | |  
+ _\_`.(___) | |  | |  | |         | |         | '  | |     | |      | |  | |  | |           | |(   )  | |  | |  |  |/  |    | |  | |  | | |  |/  |  _\_`.(___)  _\_`.(___) 
+(   ). '.   | |  | |  | |         | |         '  `-' |     | |      | |  | |  | |           | | | |   | |  | |  |  ' _.'    | |  | |  | | |  ' _.' (   ). '.   (   ). '.   
+ | |  `\ |  | '  | |  | |         | |          `.__. |     | |      | '  | |  | |           | ' | |   | |  | |  |  .'.-.    | |  | |  | | |  .'.-.  | |  `\ |   | |  `\ |  
+ ; '._,' '  '  `-' /  | |         | |          ___ | |     | |      '  `-' /  | |           ' `-' ;   | |  | |  '  `-' /    | |  | |  | | '  `-' /  ; '._,' '   ; '._,' '  
+  '.___.'    `.__.'  (___)       (___)        (   )' |    (___)      `.__.'  (___)           `.__.   (___)(___)  `.__.'    (___)(___)(___) `.__.'    '.___.'     '.___.'   
+                                               ; `-' '                                                                                                                     
+                                                .__.'                                   
+-->
+
+
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/img/favicon/site.webmanifest">
+		<link rel="shortcut icon" href="/img/favicon/favicon.ico">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
 
 		<title>Heavy Friends</title>
 
@@ -31,6 +58,7 @@
 				EMAIL <a href="mailto:c@heavyfriends.info">C@HEAVYFRIENDS.CO</a><br>
 				FOR ACCESS TO ARCHIVED AUDIO 
 			</h4>
+			<img src="img/tear.png" id="tear">
 		</div>
 
 
@@ -38,10 +66,6 @@
 			<a id="ep0" class="active">Episode 00</a>
 			<a id="ep1">Episode 01</a>
 			<a id="ep2">Episode 02</a>
-			<a id="ep3" style="text-decoration: line-through;">Episode 03</a>
-			<a id="ep4" style="text-decoration: line-through;">Episode 04</a>
-			<a id="ep5" style="text-decoration: line-through;">Episode 05</a>
-			<a id="ep6" style="text-decoration: line-through;">Episode 06</a>
 		</div>
 
 		<div id="stage">
@@ -72,11 +96,7 @@
 				<li>Toro y Moi – Us 2</li>
 				<li>Beach Fossils – Sleep Apnea</li>
 			</ol>
-			<h5 class="flip">FUCK WHAT CHU HEARD</h5>
-		</div>
-
-		<div>
-			<img src="img/tear.png" id="tear">
+			<h5 class="flip">FUCK WHAT U HEARD</h5>
 		</div>
 
 		<!-- JavaScript -->
@@ -84,7 +104,6 @@
 		<script src="js/lib/jquery.min.js"></script>
 		<script src="js/lib/three.min.js"></script>
 		<script src="js/lib/Detector.js"></script>
-		<script src="js/lib/stats.min.js"></script>
 		<script src="js/Cloth.js"></script>
 
 		<script type = "text/javascript" language = "javascript">
@@ -97,6 +116,11 @@
 			 	$('#ep1').click(function(){
 					$('#stage').load('/ep1.html');
 				});
+
+				$('#ep2').click(function(){
+					$('#stage').load('/ep2.html');
+				});
+
 
 				$('#episodes').on("click", "a", function(event) {
 					$('#episodes').children('a').each(function () {
@@ -112,28 +136,6 @@
 		</script>
 
 		<script>
-
-			/* testing cloth simulation */
-
-			// var pinsFormation = [];
-			// var pins = [ 6 ];
-
-			// pinsFormation.push( pins );
-
-			// pins = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
-			// pinsFormation.push( pins );
-
-			// pins = [ 0 ];
-			// pinsFormation.push( pins );
-
-			// pins = []; // cut the rope ;)
-			// pinsFormation.push( pins );
-
-			// pins = [ cloth.w, 0 ]; // classic 2 pins
-			// pinsFormation.push( pins );
-
-			// pins = pinsFormation[ 1 ];
-
 			var pins = [110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120];
 
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
@@ -159,7 +161,11 @@
 				// camera
 
 				camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 10000 );
-				camera.position.set( 0, 0, 800 );
+				if (window.innerWidth <= 736) {
+					camera.position.set( 0, 0, 1000 );
+
+				}
+				else camera.position.set( 0, 0, 800 );
 
 				// lights
 
@@ -224,7 +230,7 @@
 
 				// performance monitor
 
-				stats = new Stats();
+				//stats = new Stats();
 				//container.appendChild( stats.dom );
 
 				//
